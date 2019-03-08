@@ -6,13 +6,24 @@
     visibility: hidden;
 }
 
+.progress_animated .progress__arc {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+}
+
 .progress__header {
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .progress__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
@@ -27,6 +38,24 @@
     .progress__container {
         flex-direction: row;
     }
+}
+
+.progress__wheel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    transform-origin: center;
+}
+
+.progress__arc {
+    transform-origin: inherit;
+}
+
+.progress__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .progress__controls-list {
