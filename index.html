@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Progress</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="scripts.js"></script>
+    </head>
+    <body>
+        <div class="progress">
+            <h1 class="progress__header">Progress</h1>
+            <div class="progress__container">
+                <svg class="progress__wheel" width="200" height="200">
+                    <circle cx="100" cy="100" r="90" stroke="lightgray" stroke-width="10" fill="none"/>
+                    <path class="progress__arc" fill="none" stroke="#ffdb4d" stroke-width="10"/>  
+                </svg>
+
+                <div class="progress__controls">
+                    <ul class="progress__controls-list">
+                        <li>
+                            <input type="text" class="progress__value-control" value="40" onchange="updateWheel()">
+                            <span class="progress__control-label">Value</span>
+                        </li>
+                        <li>
+                            <span class="progress__toggle progress__animate-control" onclick="animateWheel(event)">
+                                <span class="progress__toggle-handle"></span>
+                            </span>
+                            <span class="progress__control-label">Animate</span>
+                        </li>
+                        <li>
+                            <span class="progress__toggle progress__hide-control" onclick="hideWheel(event)">
+                                <span class="progress__toggle-handle"></span>
+                            </span>
+                            <span class="progress__control-label">Hide</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
